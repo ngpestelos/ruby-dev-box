@@ -6,3 +6,7 @@
 	path = chef/cookbooks/apt
 	url = https://github.com/opscode-cookbooks/apt.git
 	branch = master
+[submodule "chef/cookbooks/build-essential"]
+	path = chef/cookbooks/build-essential
+	url = https://github.com/opscode-cookbooks/build-essential.git
+	branch = master
