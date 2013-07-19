@@ -9,5 +9,6 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "recipe[locale]"
     chef.add_recipe "recipe[apt]"
     chef.add_recipe "recipe[build-essential]"
+    chef.add_recipe "recipe[vim]"
   end
 end

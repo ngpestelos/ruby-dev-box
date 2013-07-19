@@ -10,3 +10,7 @@
 	path = chef/cookbooks/build-essential
 	url = https://github.com/opscode-cookbooks/build-essential.git
 	branch = master
+[submodule "chef/cookbooks/vim"]
+	path = chef/cookbooks/vim
+	url = https://github.com/opscode-cookbooks/vim.git
+	branch = master
