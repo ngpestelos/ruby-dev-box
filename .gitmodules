@@ -2,3 +2,7 @@
 	path = chef/cookbooks/locale
 	url = https://github.com/ngpestelos/chef-locale.git
 	branch = master
+[submodule "chef/cookbooks/apt"]
+	path = chef/cookbooks/apt
+	url = https://github.com/opscode-cookbooks/apt.git
+	branch = master
