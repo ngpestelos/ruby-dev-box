@@ -22,3 +22,7 @@
 	path = chef/cookbooks/chef_gem
 	url = https://github.com/hw-cookbooks/chef_gem.git
 	branch = master
+[submodule "chef/cookbooks/rvm"]
+	path = chef/cookbooks/rvm
+	url = https://github.com/fnichol/chef-rvm.git
+	branch = master
