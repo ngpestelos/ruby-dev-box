@@ -11,5 +11,6 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "recipe[build-essential]"
     chef.add_recipe "recipe[vim]"
     chef.add_recipe "recipe[openssl]"
+    chef.add_recipe "recipe[chef_gem]"
   end
 end
