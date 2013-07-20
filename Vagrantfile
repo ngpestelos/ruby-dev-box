@@ -4,6 +4,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ringtail64"
   config.vm.synced_folder ".", "/vagrant"
+  config.vm.network :forwarded_port, guest: 3000, host: 3000
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["chef/cookbooks"]
     chef.add_recipe "recipe[locale]"
