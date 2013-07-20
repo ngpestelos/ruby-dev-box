@@ -14,3 +14,7 @@
 	path = chef/cookbooks/vim
 	url = https://github.com/opscode-cookbooks/vim.git
 	branch = master
+[submodule "chef/cookbooks/openssl"]
+	path = chef/cookbooks/openssl
+	url = https://github.com/opscode-cookbooks/openssl.git
+	branch = master
