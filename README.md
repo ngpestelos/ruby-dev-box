@@ -1,3 +1,3 @@
-This is a barebones Vagrant configuration with common Chef recipes.
+## Ruby Development Box
 
-Fork and create your own *-dev-box.
+A [Vagrant](http://vagrantup.com) box for [Ruby](http://ruby-lang.org) projects.
