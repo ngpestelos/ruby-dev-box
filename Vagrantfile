@@ -14,7 +14,6 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "recipe[openssl]"
     chef.add_recipe "recipe[ruby-dev]"
     chef.add_recipe "recipe[chef_gem]"
-    chef.add_recipe "recipe[rvm::system]"
     chef.add_recipe "recipe[rvm::user]"
     chef.add_recipe "recipe[rvm::vagrant]"
     chef.json = {
@@ -26,11 +25,7 @@ Vagrant.configure("2") do |config|
             rvm_gemset_create_on_use_flag: 1,
             rvm_pretty_print_flag: 1,
             rvm_trust_rvmrcs_flag: 1
-          },
-          default_ruby: '1.9.3-p327',
-          global_gems: [
-            { name: 'zeus' }
-          ]
+          }
         }],
         vagrant: {
           system_chef_client: "/opt/ruby/bin/chef-client",
