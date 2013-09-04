@@ -15,26 +15,5 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "recipe[build-essential]"
     chef.add_recipe "recipe[vim]"
     chef.add_recipe "recipe[openssl]"
-    chef.add_recipe "recipe[ruby-dev]"
-    chef.add_recipe "recipe[chef_gem]"
-    chef.add_recipe "recipe[rvm::user]"
-    chef.add_recipe "recipe[rvm::vagrant]"
-    chef.json = {
-      rvm: {
-        user_installs: [{
-          user: "vagrant",
-          rvmrc: {
-            rvm_project_rvmrc: 1,
-            rvm_gemset_create_on_use_flag: 1,
-            rvm_pretty_print_flag: 1,
-            rvm_trust_rvmrcs_flag: 1
-          }
-        }],
-        vagrant: {
-          system_chef_client: "/opt/ruby/bin/chef-client",
-          system_chef_solo: "/opt/ruby/bin/chef-solo"
-        }
-      }
-    }
   end
 end
