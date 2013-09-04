@@ -8,6 +8,8 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--memory", "512", "--cpus", "2"]
   end
   config.vm.network :forwarded_port, guest: 3000, host: 3000
+  config.vm.synced_folder "~/", "/vagrant", id: "vagrant-root"
+  config.vm.provision :shell, inline: 'apt-get update'
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["chef/cookbooks"]
     chef.add_recipe "recipe[locale]"
