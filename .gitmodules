@@ -26,3 +26,7 @@
 	path = chef/cookbooks/rvm
 	url = https://github.com/fnichol/chef-rvm.git
 	branch = master
+[submodule "puppet/modules/rvm"]
+	path = puppet/modules/rvm
+	url = git://github.com/davekerber/puppet-rvm.git
+	branch = master
