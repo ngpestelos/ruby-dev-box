@@ -3,7 +3,10 @@
 
 Vagrant.configure("2") do |config|
   config.vm.box = "ringtail64"
-  config.vm.synced_folder ".", "/vagrant"
+  config.vm.box_url = "https://dl.dropboxusercontent.com/u/6154794/Vagrant/ringtail64.box"
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "512", "--cpus", "2"]
+  end
   config.vm.network :forwarded_port, guest: 3000, host: 3000
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["chef/cookbooks"]
