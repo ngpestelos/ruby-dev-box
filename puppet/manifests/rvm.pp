@@ -14,5 +14,9 @@ if $rvm_installed == "true" {
     'ruby-1.9.3-p448@global/bundler':
     ensure => 'present',
     require => Rvm_system_ruby['ruby-1.9.3-p448'];
+
+    'ruby-1.9.3-p448@global/chef':
+    ensure => 'present',
+    require => Rvm_system_ruby['ruby-1.9.3-p448'];
   }
 }
