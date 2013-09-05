@@ -2,9 +2,8 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "ringtail64"
-  #config.vm.box = "precise64"
-  #config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+  config.vm.box = "precise64"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--memory", "512", "--cpus", "2"]
   end
@@ -18,6 +17,14 @@ Vagrant.configure("2") do |config|
     chef.add_recipe "recipe[build-essential]"
     chef.add_recipe "recipe[vim]"
     chef.add_recipe "recipe[openssl]"
+    chef.add_recipe "recipe[mysql::server]"
+    chef.json = {
+      :mysql => {
+        :server_root_password => "",
+        :server_repl_password => "",
+        :server_debian_password => ""
+      }
+    }
   end
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "puppet/manifests"
