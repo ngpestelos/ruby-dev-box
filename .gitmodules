@@ -30,3 +30,7 @@
 	path = puppet/modules/rvm
 	url = git://github.com/davekerber/puppet-rvm.git
 	branch = master
+[submodule "chef/cookbooks/mysql"]
+	path = chef/cookbooks/mysql
+	url = https://github.com/opscode-cookbooks/mysql.git
+	branch = master
