@@ -1,6 +1,6 @@
 ## Ruby Development Box
 
-A [Vagrant](http://vagrantup.com) box for [Ruby](http://ruby-lang.org) projects.
+A [Vagrant](http://vagrantup.com) box for [CRuby](http://ruby-lang.org).
 
 ### Usage
 
